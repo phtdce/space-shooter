@@ -78,6 +78,9 @@
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 1000
+    },
+    "sound": {
+      "__uuid__": "ecc4ecc5-b0cd-48fe-ba19-dded7ef9cb79"
     }
   },
   {

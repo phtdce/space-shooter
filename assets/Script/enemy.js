@@ -4,6 +4,11 @@ cc.Class({
     properties: {
         speed: {
             default: cc.Vec2.ZERO
+        },
+
+        deathSound:{
+            default: null,
+            url: cc.AudioClip
         }
     },
 
@@ -43,6 +48,7 @@ cc.Class({
 
     onCollisionEnter(other, self) {
         if (other.node.group === 'player bullets') {
+            cc.audioEngine.playEffect(this.deathSound, false);
             this.node.destroy();
         }
     }

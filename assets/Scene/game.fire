@@ -449,7 +449,7 @@
     "bullet": {
       "__uuid__": "58f4bb98-0d0b-4a8f-b348-97946ecf22d4"
     },
-    "interval": 0.2
+    "interval": 0.25
   },
   {
     "__type__": "cc.Sprite",
@@ -675,6 +675,9 @@
       "__type__": "cc.Vec2",
       "x": 0,
       "y": -100
+    },
+    "deathSound": {
+      "__uuid__": "3b4f5331-82c6-4418-88b6-a4c8718e8187"
     }
   },
   {
@@ -834,6 +837,9 @@
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 1000
+    },
+    "sound": {
+      "__uuid__": "ecc4ecc5-b0cd-48fe-ba19-dded7ef9cb79"
     }
   },
   {
@@ -918,6 +924,9 @@
     "node": {
       "__id__": 2
     },
-    "_enabled": true
+    "_enabled": true,
+    "music": {
+      "__uuid__": "274533c9-38f8-4ea2-bdab-7d21ae43fbe9"
+    }
   }
 ]
