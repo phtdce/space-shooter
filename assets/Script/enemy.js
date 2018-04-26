@@ -19,7 +19,10 @@ cc.Class({
     },
 
     onEnable() {
-
+        let tracer = this.node.getComponent('tracer');
+        if(tracer){
+            tracer.target = G.player.node;
+        }
     },
 
     start() {
