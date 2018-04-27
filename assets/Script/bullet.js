@@ -24,5 +24,11 @@ cc.Class({
         cc.audioEngine.playEffect(this.sound, false);
     },
 
+    onCollisionEnter(other, self) {
+        if (other.node.group === 'enemys') {
+            G.bullets.remove(this);     
+        }
+    }
+
     // update (dt) {},
 });

@@ -18,13 +18,6 @@ cc.Class({
         this._super();
     },
 
-    onEnable() {
-        let tracer = this.node.getComponent('tracer');
-        if(tracer){
-            tracer.target = G.player.node;
-        }
-    },
-
     start() {
 
     },
@@ -52,7 +45,9 @@ cc.Class({
     onCollisionEnter(other, self) {
         if (other.node.group === 'player bullets') {
             cc.audioEngine.playEffect(this.deathSound, false);
-            this.node.destroy();
+            if(--this.hp < 1){
+                this.node.destroy();
+            }
         }
     }
 });

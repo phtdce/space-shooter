@@ -2,7 +2,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        enemy: cc.Prefab,
+        enemyList: {
+            default: [],
+            type: [cc.Prefab]
+        },
         interval: 2
     },
 
@@ -12,6 +15,7 @@ cc.Class({
 
     onEnable() {
         this.schedule(this.spawn, this.interval);
+        this.first = true;
     },
 
     onDisable() {
@@ -19,14 +23,16 @@ cc.Class({
     },
 
     spawn() {
-        let enemyNode = cc.instantiate(this.enemy);
-        enemyNode.active = true;
-        enemyNode.parent = this.node;
+
+        let enemy = this.first ? cc.instantiate(this.enemyList[1]) : cc.instantiate(this.enemyList[0]);       
+        this.first = false;
+        enemy.active = true;
+        enemy.parent = this.node;
         let screen = cc.Canvas.instance.node.getContentSize();
 
         const RADIUS = 50;
-        enemyNode.x = cc.lerp(-screen.width / 2 + RADIUS, screen.width / 2 - RADIUS, Math.random());
-        enemyNode.y = screen.height / 2 - RADIUS;
+        enemy.x = cc.lerp(-screen.width / 2 + RADIUS, screen.width / 2 - RADIUS, Math.random());
+        enemy.y = screen.height / 2 - RADIUS;
     }
 
     // update (dt) {},
