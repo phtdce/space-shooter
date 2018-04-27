@@ -77,7 +77,7 @@
     "speed": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -200
+      "y": -150
     },
     "sound": {
       "__uuid__": "9fce3ced-8e82-49ba-9034-d275960a1ef9"

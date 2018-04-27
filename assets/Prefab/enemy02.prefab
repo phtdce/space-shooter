@@ -60,8 +60,8 @@
     "_scaleY": 1.5,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -141,
-      "y": 194
+      "x": 0,
+      "y": 370
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -135,7 +135,7 @@
     "bullet": {
       "__uuid__": "07d3024e-0617-43b0-a813-81380f89c390"
     },
-    "interval": 0.2
+    "interval": 2
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -208,8 +208,8 @@
     "hp": 100,
     "speed": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -10
+      "x": -15,
+      "y": 0
     },
     "deathSound": {
       "__uuid__": "93db1885-9942-4582-ba02-bb2e53af7f9b"

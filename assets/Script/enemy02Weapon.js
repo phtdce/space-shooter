@@ -36,12 +36,9 @@ cc.Class({
     add(bulletPos){
         let bulletNode = cc.instantiate(this.bullet);
         bulletNode.active = true;
-        bulletPos.subSelf(this.node.parent.position);
+        bulletPos.subSelf(cc.Canvas.instance.node.position);
         bulletNode.position = bulletPos;
-        bulletNode.parent = this.node;
+        bulletNode.parent = cc.Canvas.instance.node;
     },
-
-
-
     // update (dt) {},
 });
